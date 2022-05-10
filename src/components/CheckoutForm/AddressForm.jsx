@@ -6,7 +6,7 @@ import { commerce } from "../../lib/commerce"
 
 import FormInput from './CustomTextField';
 
-const AddressForm = ({ checkoutToken, next }) => {
+const AddressForm = ({ checkoutToken, test }) => {
     const [shippingCountries, setShippingCountries] = useState([])
     const [shippingCountry, setShippingCountry] = useState('')
     const [shippingSubdivisons, setShippingSubdivisions] = useState([])
@@ -14,6 +14,7 @@ const AddressForm = ({ checkoutToken, next }) => {
     const [shippingOptions, setShippingOptions] = useState([])
     const [shippingOption, setShippingOption] = useState('')
     const methods = useForm();
+  
 
     const countries = Object.entries(shippingCountries).map(([code,name]) => ({ id: code, label: name}))
     const subdivisions = Object.entries(shippingSubdivisons).map(([code,name]) => ({ id: code, label: name}))
@@ -35,15 +36,15 @@ const AddressForm = ({ checkoutToken, next }) => {
         setShippingSubdivision(Object.keys(subdivisions)[0]);
     }
 
-    const fetchShippingOptions = async (checkoutTokenId, country, region = null) => {
-        const options = await commerce.checkout.getShippingOptions(checkoutTokenId, { country, region })
+    const fetchShippingOptions = async (checkoutTokenId, country, stateProvince = null) => {
+        const options = await commerce.checkout.getShippingOptions(checkoutTokenId, { country, region: stateProvince })
 
         setShippingOptions(options)
         setShippingOption(options[0].id);
     }
 
     useEffect(() => {
-        fetchShippingCountries(checkoutToken)
+        fetchShippingCountries(checkoutToken.id)
     }, []);
 
     useEffect(() => {
@@ -58,7 +59,7 @@ const AddressForm = ({ checkoutToken, next }) => {
     <>
         <Typography variant="h6" gutterBottom>Shipping Address</Typography>
         <FormProvider {...methods}>
-            <form onSubmit={methods.handleSubmit((data) => next({ ...data, shippingCountry, shippingSubdivison, shippingOption }))}>
+            <form onSubmit={methods.handleSubmit((data) => test({ ...data, shippingCountry, shippingSubdivison, shippingOption }))}>
                 <Grid container spacing={3}>
                     <FormInput name="firstName" label="First name" />
                     <FormInput name="lastName" label="Last name" />
@@ -99,7 +100,7 @@ const AddressForm = ({ checkoutToken, next }) => {
                     <br />
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <Button component={Link} to="/cart" variant="outlined">Back to Cart</Button>
-                        <Button type="Submit" variant="contained" color="primary">Next</Button>
+                        <Button type="submit" variant="contained" color="primary">Next</Button>
                     </div>    
                 </Grid> 
             </form>
