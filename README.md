@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Caniafe Ordo Forges Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployed Website
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+The "work in progress" website for the popular Mandalorian Armor Etsy shop, Caniafe Ordo Forges. The basic functionality of the commerce website is complete with users being able to add items to the cart and being able to checkout and pay with a credit card. All of Canaife's products have been added to the CommerceJS API and we plan on expanding the product list with variations and customization features. When testing the checkout process, please use card number 4242424242424242 with any valid future date, any three-digit CVC, and any user value you would like for the rest of the checkout form fields. 
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* React.js
+* CommerceJS
+* Stripe Payment API
+* Material UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Future Plans
 
-### `npm test`
+I'm currently in the process of working on other branches where I'll be styling the website to fit Caniafe Ordo Forge's brand. I'm going to add product pages so the user can better customize the armor and have a contact page so that they can directly communicate with Caniafe. I also want to learn how to add other payment methods like Klarna as requested by the client. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## References
 
-### `npm run build`
+* The Youtube Tutorial that helped teach me how to create the basic functionality of this website (https://youtu.be/377AQ0y6LPA)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
